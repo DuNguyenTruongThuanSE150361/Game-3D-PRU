@@ -1,3 +1,14 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Chặn thư mục chứa assets nặng
+assets/
+
+# Chặn các file import tự động của Godot (nếu bạn muốn nhẹ repo)
+*.import
+
+# Chặn file tạm và backup
+*.tmp
+*.bak
+*.swp
