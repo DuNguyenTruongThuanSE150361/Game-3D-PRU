@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://b2pnrfkbgwgx" path="res://scenes/Character/Player4.tscn" id="1_player4"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="2_npcgd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.3
+height = 1.8
+
+[node name="NpcOldman" type="CharacterBody3D"]
+script = ExtResource("2_npcgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_1")
+
+[node name="Player4" parent="." instance=ExtResource("1_player4")]

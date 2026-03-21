@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://cy3mk2n3i0pif" path="res://scenes/Character/Player3.tscn" id="1_player3"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="2_npcgd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.3
+height = 1.8
+
+[node name="NpcDoctor" type="CharacterBody3D"]
+script = ExtResource("2_npcgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_1")
+
+[node name="Player3" parent="." instance=ExtResource("1_player3")]
